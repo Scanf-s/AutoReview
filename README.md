@@ -94,7 +94,12 @@
 		-  Apache JMeter 사용하여 부하 테스트
 		- FastAPI 배치 API에 동시 요청 1000개 보내고 응답 시간 측정 수행.
 
-### 6. Spring Boot REST API 구현
+### 5. Spring Boot REST API 구현
 - 웹 서비스 제공을 위한 API 구현
 - 문서는 직접 Notion에 작성 -> Naver, 쿠팡, 넥슨 OpenAPI 구조를 참고하며 작성
 - 각 API 구현 이전 테스트 코드 먼저 작성하고 이를 만족시키기 위한 API 구현 수행 -> TDD 개발 방법론 경험
+
+
+# ERD
+
+# Cloud Architecture
