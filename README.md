@@ -107,6 +107,7 @@
 
 ---
 
-# Cloud Architecture
+# Project Architecture
+
 ![image](https://github.com/user-attachments/assets/a7dd6db7-ab11-4fdc-b912-b5d6b5a54135)
 
