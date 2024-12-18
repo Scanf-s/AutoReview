@@ -2,12 +2,14 @@
 
 ## 프로젝트 주제
 - 3줄 요약 뉴스 서비스 백엔드 구현
+---
 
 ## 프로젝트 목적
 - 다양한 카테고리(키워드)의 뉴스 데이터를 수집하고 이를 처리하는 대규모 데이터 처리 경험
 - Java Spring boot 프레임워크 학습 및 활용 역량 향상
 - AI 적용 및 활용 능력
 - 한국에서 취업 경쟁력을 증진하기 위함
+---
 
 ## 사용 기술 스택
 가장 중요한것은, 역량 향상이나, 비용 문제를 해결해야함
@@ -21,6 +23,7 @@
 -   **AWS SQS**: 비동기 데이터 전달
 -   **AWS EventBridge**: Lambda 트리거
 -   **AWS CloudWatch**: 모니터링 및 알림
+---
 
 ## 작업 순서
 
@@ -98,8 +101,12 @@
 - 웹 서비스 제공을 위한 API 구현
 - 문서는 직접 Notion에 작성 -> Naver, 쿠팡, 넥슨 OpenAPI 구조를 참고하며 작성
 - 각 API 구현 이전 테스트 코드 먼저 작성하고 이를 만족시키기 위한 API 구현 수행 -> TDD 개발 방법론 경험
-
+---
 
 # ERD
 
+---
+
 # Cloud Architecture
+![image](https://github.com/user-attachments/assets/a7dd6db7-ab11-4fdc-b912-b5d6b5a54135)
+
