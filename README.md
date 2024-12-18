@@ -98,5 +98,4 @@ Slack API 또는 Jira API를 활용하여 리뷰 결과 자동 알림.
 
 # Project Architecture
 
-![image](https://github.com/user-attachments/assets/a7dd6db7-ab11-4fdc-b912-b5d6b5a54135)
-
+![image](https://github.com/user-attachments/assets/fbd3f24c-0407-4860-ab42-11d25cc0fdb0)
