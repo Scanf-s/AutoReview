@@ -15,9 +15,8 @@
 
 ## 사용 기술 스택
 - Spring Boot: REST API 제공 및 백엔드 서비스 구현.
-- FastAPI: AI 모델 서빙 (OpenAI API 활용).
 - PostgreSQL (RDS): 코드 리뷰 기록 저장 및 서비스 메인 데이터베이스.
-- AWS Lambda: GitHub 웹훅 이벤트 처리 및 서버리스 데이터 처리.
+- AWS Lambda: GitHub 웹훅 이벤트 처리 및 서버리스 데이터 처리, OpenAI와 통신
 - AWS SQS: 비동기 데이터 전달.
 - AWS EventBridge: Lambda 트리거.
 - AWS CloudWatch: 모니터링 및 알림.
@@ -69,22 +68,18 @@
    코드 리뷰 생성 결과를 Slack 또는 이메일로 알림.
 
 ### 4. OpenAI API 통합 및 코드 리뷰 생성 (MM/DD ~ MM/DD)
-- OpenAI API를 활용한 코드 리뷰 프롬프트 엔지니어링 예시:
+1. AWS SQS 설정
+- SQS 큐 생성 (AutoReviewQueue)
+- IAM 역할 생성 및 SQS 접근 권한 부여
+- Lambda 함수에 IAM 역할 할당
 
-```plaintext
-"You are an experienced software engineer. Review the following code changes:
-- Repository: [repository_name]
-- Pull Request: [pull_request_title]
-- Changed Files: [file_paths]
-- Changes: [code_diff]
-
-Provide feedback on code quality, potential bugs, best practices, and improvement suggestions."
-```
-
-- FastAPI에서 OpenAI API 호출:
-변경된 코드와 커밋 내역을 기반으로 프롬프트 생성.
-OpenAI API로부터 응답 받은 리뷰 내용을 데이터베이스에 저장.
-데이터베이스에 응답 구조를 저장하여 추후 OpenAI 파인 튜닝 시 이를 활용할 수 있다고 생각함
+2. Lambda 함수 구현
+- Lambda 함수 생성 (Python)
+- 메시지 수신 및 파싱 로직 구현
+- OpenAI API 호출 및 코드 리뷰 생성
+- PostgreSQL에 리뷰 저장 로직 구현
+- GitHub PR에 코멘트 추가 로직 구현
+- 에러 핸들링 및 DLQ 설정 (이건 나중에)
 
 ### 5. Spring Boot REST API 구현
 - 웹 서비스 제공을 위한 API 구현
